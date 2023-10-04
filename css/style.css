@@ -1,0 +1,221 @@
+/* Start global rules */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: hsl(221, 100%, 96%);
+}
+/* Start container */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* extra-small */
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* small */
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+/* medium */
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+/* large */
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+/* x-large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* xx-large */
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+/* End container */
+/* End global rules */
+/* start variables */
+:root {
+  --main-padding: 30px;
+  --main-margin: 20px;
+  --main-br: 20px;
+}
+/* End variables */
+/* Start design  */
+.main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.main .container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.main .result {
+  text-align: center;
+  flex-basis: 50%;
+  border-radius: var(--main-br);
+  padding: var(--main-padding);
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  color: hsl(241, 100%, 89%);
+  z-index: 1;
+}
+.main .result h1 {
+  font-size: 20px;
+  margin-bottom: var(--main-margin);
+}
+.main .result ul {
+  background-image: linear-gradient(
+    hsla(256, 72%, 46%, 1),
+    hsla(241, 72%, 46%, 0)
+  );
+  width: 150px;
+  border-radius: 50%;
+  margin: 0 auto var(--main-margin);
+  padding: var(--main-padding);
+}
+.main .result ul .deg {
+  font-size: 60px;
+  color: white;
+  font-weight: 800;
+}
+.main .result .text {
+  width: 230px;
+  margin: 0 auto;
+}
+.main .result h2 {
+  color: white;
+  padding-bottom: 20px;
+  font-weight: 700;
+}
+.main .result p {
+  font-size: 18px;
+}
+@media (max-width: 767px) {
+  .main .result p {
+    font-size: 10px;
+  }
+}
+.main .summary {
+  padding: var(--main-padding) 40px 0;
+  margin-left: -19px;
+  flex: 1;
+  border-top-right-radius: var(--main-br);
+  border-bottom-right-radius: var(--main-br);
+  background-color: white;
+  position: relative;
+}
+.main .summary h2 {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.main .summary .box {
+  position: relative;
+  display: flex;
+  margin: var(--main-margin) 0;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px 15px;
+  border-radius: var(--main-br);
+  transition: 0.3s;
+}
+
+.main .summary .l-r {
+  background-color: hsl(0, 100%, 96%);
+}
+.main .summary .l-r span:first-child {
+  color: hsl(0, 100%, 67%);
+}
+.main .summary .c-b span:first-child::before,
+.main .summary .l-r span:first-child::before,
+.main .summary .o-y span:first-child::before,
+.main .summary .g-t span:first-child::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 10px;
+}
+.main .summary .l-r span:first-child::before {
+  content: "\f0e7";
+}
+
+.main .summary .o-y {
+  background-color: hsl(39, 100%, 90%);
+}
+.main .summary .o-y span:first-child {
+  color: hsl(39, 100%, 56%);
+}
+.main .summary .o-y span:first-child::before {
+  content: "\f5dc";
+}
+.main .summary .g-t {
+  background-color: hsl(166, 100%, 96%);
+}
+.main .summary .g-t span:first-child {
+  color: hsl(166, 100%, 37%);
+}
+.main .summary .g-t span:first-child::before {
+  content: "\f4ad";
+}
+
+.main .summary .c-b {
+  background-color: hsl(234, 85%, 96%);
+}
+.main .summary .c-b span:first-child {
+  color: hsl(234, 85%, 45%);
+}
+.main .summary .c-b span:first-child::before {
+  content: "\f06e";
+}
+.main .summary strong {
+  font-weight: 800;
+}
+.main .summary button {
+  width: 100%;
+  border-radius: var(--main-br);
+  color: white;
+  background-color: hsl(224, 30%, 27%);
+  padding: 10px 0;
+  border: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main .summary button:hover {
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+/* End design  */
